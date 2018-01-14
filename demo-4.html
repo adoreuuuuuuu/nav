@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导航</title>
+	<meta charset="utf-8">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul li{
+			list-style: none;			
+		}
+
+		.nav-side {
+			margin: 5px 0 0 5px;
+		}	
+
+		.category{
+			position: relative;
+			padding:5px 5px;
+			width:130px;
+			background-color: #de272e;
+			font-size: 14px;
+			border-bottom: 1px dotted #de272e;
+		}
+
+		.category a{
+			color: #fff;
+		}
+
+		.icon-goto{
+			position: absolute;
+			color: #fff;
+			right: 10px;
+		}
+
+		.child-panel{
+			display:none;
+			position:absolute;
+			left: 140px;
+			top: 0;
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			border-left: none;
+			width: 150px;
+		}
+
+		.child-panel li{
+			float:left;
+			margin:5px 20px 5px 10px;
+			cursor: pointer;
+		}
+
+	</style>
+	<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+	<div id="nav">
+		<ul class="nav-side">
+			<li class="category">
+				<a href="#">珠宝玉器</a>
+				<span class="icon-goto">></span>
+				<ul class="child-panel">
+					<li>翡翠</li>
+					<li>宝石</li>
+					<li>玛瑙</li>
+					<li>钻石</li>
+					<li>和田</li>
+					<li>玉石</li>
+					<li>水晶</li>
+					<li>珍珠</li>
+					<li>琥珀</li>
+					<li>琥珀</li>
+				</ul>
+			</li>
+			<li class="category">
+				<a href="#">珠宝玉器</a>
+				<span class="icon-goto">></span>
+				<ul class="child-panel">
+					<li>翡翠</li>
+					<li>宝石</li>
+					<li>玛瑙</li>
+					<li>钻石</li>
+					<li>和田</li>
+					<li>玉石</li>
+				</ul>
+			</li>
+			<li class="category">
+				<a href="#">珠宝玉器</a>
+				<span class="icon-goto">></span>
+				<ul class="child-panel">
+					<li>翡翠</li>
+					<li>宝石</li>
+					<li>玛瑙</li>
+					<li>钻石</li>
+				</ul>
+			</li>
+			<li class="category">
+				<a href="#">珠宝玉器</a>
+				<span class="icon-goto">></span>
+				<ul class="child-panel">
+					<li>翡翠</li>
+					<li>宝石</li>
+					<li>玛瑙</li>
+					<li>钻石</li>
+					<li>和田</li>
+					<li>玉石</li>
+				</ul>
+			</li>
+			<li class="category">
+				<a href="#">珠宝玉器</a>
+				<span class="icon-goto">></span>
+				<ul class="child-panel">
+					<li>翡翠</li>
+					<li>宝石</li>
+					<li>玛瑙</li>
+					<li>钻石</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<script>
+		$('.nav-side .category').on('mouseenter',function(){
+			$(this).find('.child-panel','.child-panel li').show()
+		})
+
+		$('.nav-side .category').on('mouseleave',function(){
+			$(this).find('.child-panel','.child-panel li').hide()
+		})
+
+	</script>
+</body>
+</html>
